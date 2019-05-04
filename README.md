@@ -7,7 +7,7 @@
 
 > ES2015 tagged template string for removing indent from strings.
 
-Behavior based on [`textwrap.dedent`](https://docs.python.org/3/library/textwrap.html#textwrap.dedent), except interpolated values interpolated raw. This allows you to interpolate strings that already have `dedent` applied.
+Mirrors on [`textwrap.dedent`](https://docs.python.org/3/library/textwrap.html#textwrap.dedent), but ignores interpolated values. Why? You can embed `dedent`ed strings without breaking indent calculation.
 
 ## Installation
 
