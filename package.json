@@ -1,6 +1,6 @@
 {
   "name": "dedent-tag",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ES2015 tagged template string for removing indent from strings",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
