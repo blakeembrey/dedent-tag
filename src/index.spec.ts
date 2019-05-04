@@ -89,6 +89,24 @@ describe("dedent", () => {
     expect(text).toEqual("\ninterpolated\n\ntest\nvalue\n\n");
   });
 
+  it("should strip indent based on smallest indent", () => {
+    const text = dedent`
+      indented
+    here
+    `;
+
+    expect(text).toEqual("\n  indented\nhere\n");
+  });
+
+  it("should do nothing when there's no indent", () => {
+    const text = dedent`
+no
+  indent
+    `;
+
+    expect(text).toEqual("\nno\n  indent\n");
+  });
+
   it("should support usage as a function", () => {
     const text = dedent(`
     test

@@ -8,7 +8,7 @@ export default function dedent(
   ...values: any[]
 ) {
   const strings = typeof input === "string" ? [input] : input;
-  const m = /^\r?\n?([\t ]*)/.exec(strings[0]);
+  const m = /^\r?\n?([\t ]+)/.exec(strings[0]);
   let indent = m ? m[1] : "";
 
   for (const str of strings) {
