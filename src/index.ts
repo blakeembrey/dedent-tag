@@ -1,12 +1,12 @@
 export default function dedent(input: string): string;
 export default function dedent(
-  input: TemplateStringsArray,
+  input: TemplateStringsArray | string[],
   ...values: any[]
 ): string;
 export default function dedent(
-  input: string | TemplateStringsArray,
+  input: string | string[] | TemplateStringsArray,
   ...values: any[]
-) {
+): string {
   const strings = typeof input === "string" ? [input] : input;
   const m = /^\r?\n?([\t ]+)/.exec(strings[0]);
   let indent = m ? m[1] : "";
